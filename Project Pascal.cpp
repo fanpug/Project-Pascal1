@@ -889,7 +889,7 @@ void Battleprocessing(){
 	int turn = 0, choice, which, runatt;
 	bool beaten = false;
 	int EAttack, who, damage, y = 6;
-	which = rand()%5;
+	which = rand()%4;
 	float temporaryEHealth = EnemyPool[which].Fullhealth;
 	system("CLS");
 	gotoXY(16, 8); cout << "YOU ARE UNDER ATTACK!";
