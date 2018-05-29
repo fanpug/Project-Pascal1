@@ -150,7 +150,7 @@ void partystat(){
 	// end of pascal the dog's stats
 }
 
-//this is the class for the intems on the game, type reffers to the kind of effect iw will have
+//this is the class for the items on the game, type refers to the kind of effect it will have
 class Recover_item{
 	public:
 	string ItemName;
@@ -1159,6 +1159,7 @@ void pauseMenu(){
     while(choosing == true){
 
         gotoXY(23, 2); cout << "PAUSE";
+        gotoXY(38,14); cout << "You have: " << party[1].money << char(36);
         gotoXY(5, 5); cout << "Continue";
         gotoXY(5, 6); cout << "Exit";
         gotoXY(5, 7); cout << "Bandages: " << party[1].bandages;
