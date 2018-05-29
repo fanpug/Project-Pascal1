@@ -19,7 +19,7 @@ int movemenu(int member); // this is for the menu for choosing the move for a pa
 void shopmenu();
 
 
-// this is going to output a meddage in the upper part of the screen
+// this is going to output a message in the upper part of the screen
 void upper_message(string msg){
 	boxhud();
 	gotoXY(3,2); cout << msg;
@@ -281,12 +281,12 @@ void overworld(){
 			count++;
 			gotoXY(8,3 + count);
 		}
-
+        system("pause>nul");
 		if(Broll == 5){
 			Battleprocessing();
 		}
 
-		system("pause>nul");
+
 		if(GetAsyncKeyState(VK_UP) && getCharAt(positionx-1,positiony) != (char) 254){
 			if(getCharAt(positionx-1,positiony) == 'T'){
 				Talkmessage();
@@ -376,6 +376,13 @@ void overworld(){
 				map[positionx][positiony+1] = 2;
 				map[positionx][positiony] = 1;
 				continue;
+			}
+			if(getCharAt(positionx,positiony+1) == 'X'){
+                try{throw 0;}
+                catch(int x){
+                    main_message("you have finally escaped... with pascal.")
+                    exit(0);
+                }
 			}
 			else{
 				map[positionx][positiony+1] = 2;
